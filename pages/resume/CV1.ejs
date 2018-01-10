@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <style>
+        #body-properties{
+            height: 296.5mm;
+            width: 210mm;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #main-div{
+            background-color: rgb(222,222,222);
+            height: 100%;
+            width: 100%;
+        }
+        #outer-circle{
+            margin: 2% 0 0 2%;
+            border-radius: 50%;
+            border-color: #4bf7b8;
+            align-content: space-between;
+            border-style: solid;
+            width: 150px;
+            height: 150px;
+        }
+        #dotted-circle{
+            border-radius: 50%;
+            margin: 5px 0 0 4px;
+            border-color: rgb(0,0,0);
+            border-style:  dotted;
+            width: 135px;
+            height: 135px;
+        }
+        #inner-circle{
+            text-align: center;
+            border-radius: 50%;
+            margin: 4px 0 0 5px;
+            background-color: rgb(46, 49, 146);
+            width: 120px;
+            height: 120px;
+            border-style: inherit;
+        }
+        #fname{
+            color: white;
+            font-family: 'Merriweather', serif;
+            margin: 25px 0 0 0;
+            font-size: 1.3em;
+        }
+        #lname{
+            font-family: 'Merriweather', serif;
+            color: white;
+            font-size: 1.3em;
+        }
+        #name-dots{
+            color: white;
+            font-size: 1.3em;
+            font-weight: 800;
+            }
+        #upperline{
+            background-color: rgb(46, 49, 146);
+            height: 8px;
+            width: 500px;
+            border-radius: 10px;
+            margin: -120px 0 0 200px;
+            }
+        #post{
+            color: rgb(46, 49, 146);
+            font-size: 1.5em;
+            font-family: 'Merriweather', serif;
+            font-weight: 600;
+            width: 200px;
+            margin: 25px 0 0 200px;
+        }
+        #personal-details{
+            font-size: 2em;
+            margin: -35px 0 0 410px;
+            }
+        .green-circles{
+            text-align: center;
+            border-radius: 50%;
+            background-color: rgb(33, 140, 88);
+            width: 50px;
+            height: 50px;
+            color: white;
+        }
+
+
+        #vertical-line{
+            width: 2px;
+            height: 60px;
+            background-color: black;
+            margin: -55px 0 0 470px;
+        }
+        #DOB{
+            font-family: 'Merriweather', serif;
+            font-weight: 400;
+            font-size: 1em;
+            margin: -52px 0 0 480px;
+            max-width: 100px;
+        }
+        #Add{
+            font-size: 1em;
+            font-family: 'Merriweather', serif;
+            font-weight: 400;
+            max-width: 300px;
+            margin: 0 0 0 480px;
+        }
+        .horiz-line{
+            width: 700px;
+            height: 3px;
+            background-color: black;
+            }
+        #first-hor-line{
+            margin: 60px 0 0 45px;
+        }
+        #second-hor-line{
+            margin: -25px 0 50px 45px;
+        }
+        #third-hor-line{
+            margin: 32px 0 0 45px;
+        }
+        #contact-circle{
+            font-size: 2.5em;
+            }
+        #contact-div{
+         margin-top: 15px;   
+        }
+        #sk-li-circle{
+            font-size: 2em;
+        }
+        #sk-li-div{
+            margin-top: 15px;
+        }
+        #email-circle{
+            font-size: 2em;
+        }
+        #contact-one{
+            margin-top: 8px;
+            font-family: 'Merriweather', serif;
+            font-weight: 400;
+            font-size: 0.8em;
+        }
+        #contact-two{
+            margin-top: -5px;
+            font-family: 'Merriweather', serif;
+            font-weight: 400;
+            font-size: 0.8em;
+        }
+        #email-div{
+            margin-top: 15px;
+        }
+        #email{
+            margin-top: 15px;
+            font-family: 'Merriweather', serif;
+            font-weight: 400;
+            font-size: 0.8em;
+        }
+        #skype{
+            margin-top: 8px;
+            font-family: 'Merriweather', serif;
+            font-weight: 400;
+            font-size: 0.8em;
+        }
+        #linkedin{
+            margin-top: -5px;
+            font-family: 'Merriweather', serif;
+            font-weight: 400;
+            font-size: 0.8em;
+        }
+        .green-rectangles{
+            max-width: 180px;
+            text-align: center;
+            max-height: 30px;
+            font-size: 0.9em;
+            background-color: rgb(33, 140, 88);
+            color: white;
+            border-radius: 6px;
+            font-family: 'Merriweather', serif;
+        }
+        #rectangles-gap{
+            margin-top: 30px;
+        }
+        #education-circle{
+            font-size: 2.2em;
+        }
+        #experience-circle{
+            font-size: 2.2em;
+        }
+        .education-text{
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        .experience-text{
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        #one-ed-ex{
+            margin-bottom: 5%;
+        }
+        #two-ed-ex{
+            margin-bottom: 5%;
+        }
+        #three-ed-ex{
+            margin-bottom: 5%;
+        }
+        #four-ed-ex{
+            margin-bottom: 5%;
+        }
+        #pro-ski-rect{
+            margin: 0 0 0 80mm;
+        }
+        #pro-ski-circle{
+            margin: -25px 0 0 98mm;
+        }
+        #pro-ski-text{
+            font-size: 2.5em;
+            padding-top: 5px;
+        }
+        #stars{
+         font-size: 1.5em;
+         color: rgb(255, 187, 0);
+        }
+        #skills{
+            margin-top: 4mm;
+        }
+        .star-gap{
+            margin-right: 3mm;
+        }
+        .skill-text{
+            padding: 1mm 0 0 0;
+            font-size: 1em;
+            font-weight: 600;
+            font-family: 'Merriweather', serif;
+        }
+        @media print{
+            #main-div {
+                background-color: rgb(222,222,222) !important;
+            }
+            
+            #outer-circle {
+                border-color: #4bf7b8 !important;
+            }
+            #dotted-circle{
+                border-color: rgb(0,0,0)  !important;
+                border-style:  dotted  !important;
+            }
+            #inner-circle{
+                background-color: rgb(46, 49, 146) !important;
+            }
+            #fname{
+                color: white !important;
+            }
+            #lname{
+                color: white !important;
+            }
+            #name-dots{
+                color: white !important;
+            }
+            #upperline{
+                background-color: rgb(46, 49, 146) !important;
+            }
+            #post{
+                color: rgb(46, 49, 146) !important;
+            }
+            .green-circles{
+                background-color: rgb(33, 140, 88) !important;
+                color: white !important;
+            }
+            #vertical-line{
+                background-color: black !important;
+            }
+            .horiz-line{
+                background-color: black !important;
+            }
+            .green-rectangles{
+                background-color: rgb(33, 140, 88) !important;
+                color: white !important;
+            }
+            #stars{
+                color: rgb(255, 187, 0) !important;
+            }
+            .fa.fa-tablet:before, .fa.fa-envelope-open:before, .fa.fa-desktop:before,
+            .fa.fa-graduation-cap:before, .fa.fa-briefcase:before, .fa.fa-male:before,
+            .fa.fa-wrench:before
+            {
+                color: white !important;
+            }
+            .green-rectangles>p {
+                color: white !important;
+            }
+            .fa.fa-star.star-gap:before {
+                color: rgb(255, 187, 0) !important;
+            }
+        }
+
+    </style>
+    
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link href="./public-files/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./public-files/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+    
+<body id="body-properties">
+<div id="main-div">
+
+    <div class="row container-fluid"> <!--first row div started-->
+    <div id="outer-circle">
+    <div id="dotted-circle">
+        
+        <div id="inner-circle">
+            <p id="fname"><%=  firstName%></p>
+            <p id="lname"><%=  lastName%></p>
+            <p id="name-dots">. . .</p>
+        </div>
+    
+        </div>
+    </div>
+        <div id="upperline"></div>
+        <p id="post"><%=  postApplied%></p>
+        <div class="green-circles" id="personal-details">
+            <i class="fa fa-male"></i>
+        </div>
+        <div id="vertical-line"></div>
+        <div>
+        <p id="DOB"><%=  dob%></p>
+        <p id="Add"><%=  address%></p>
+        </div>
+        <div class="horiz-line" id="first-hor-line"></div>       
+    </div> <!-- first row div ended-->
+    
+    
+    
+        <div class="row container-fluid">
+        <div class="col-xs-4" id="contact-div">
+        <div class="row">
+            <div class="col-xs-3"><div id="contact-circle" class="green-circles"><i class="fa fa-tablet"></i></div></div>
+            <div class="col-xs-9">
+            <p id="contact-one"><%=  cellNumOne%></p>
+            <p id="contact-two"><%=  cellNumTwo%></p></div>
+        </div>
+        </div>
+        
+        <div class="col-xs-4" id="email-div">
+            <div class="col-xs-3"><div id="email-circle" class="green-circles"><i style="padding-top: 6px" class="fa fa-envelope-open"></i></div></div>
+            <div class="col-xs-9"><p id="email"><%=  email%></p></div>
+        </div>
+        
+        <div class="col-xs-4" id="sk-li-div">
+            <div class="row">
+            <div class="col-xs-3"><div id="sk-li-circle" class="green-circles"><i style="padding-top: 8px" class="fa fa-desktop"></i></div></div>
+            <div class="col-xs-9">
+            <p id="skype"><%=  skypeID%></p>
+            <!--<p id="linkedin">LinkedIn Profile</p>--></div>
+            </div>
+        </div>
+        </div>
+        
+        
+        <!--EDUCATION AND EXPERIENCE STARTED-->
+        <!--********************************-->
+        <div class="row" id="rectangles-gap"> 
+        <div class="col-xs-2"></div>
+        <div class="col-xs-4">
+        <div class="green-rectangles"><p style="padding-top: 5px">Education</p></div>
+        </div>
+        <div class="col-xs-1"></div>
+            
+        <div class="col-xs-4" id="experience-div">
+        <div class="green-rectangles"><p style="padding-top: 5px">Experience</p></div>
+        </div>
+        <div class="col-xs-1"></div>
+        </div>
+    
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-1"><div id="education-circle" class="green-circles"><i class="fa fa-graduation-cap"></i></div></div>
+            <div class="col-xs-2"></div>
+            <div class="col-xs-2"></div>
+            <div class="col-xs-4"><div id="experience-circle" class="green-circles"><i class="fa fa-briefcase"></i></div></div>        
+        </div>
+        <div class="horiz-line" id="second-hor-line"></div>
+        <!--EDUCATION & EXPERIENCE TEXT -->
+        
+    
+        <!--EDUCATION & EXPERIENCE TEXT ONE-->
+        <div class="row" id="one-ed-ex">
+        <div class="col-xs-1"></div>
+        <div class="education-text col-xs-5">
+        <div class="row">
+            <div class="col-xs-4"><p id="edPeriodOne"><%=  qperiodOne%></p></div>
+            <div class="col-xs-8"><p id="degreeOne"><%=   degreeOne%></p></div>
+        </div>
+            <div>    <p id="instOne"><%= instNameOne%></p></div>
+        </div>
+        
+        <div class="experience-text col-xs-5">
+        <div class="row">
+            <div class="col-xs-4"><p id="exPeriodOne"><%=  eperiodOne%></p></div>
+            <div class="col-xs-8"><p id="jobOne"><%=  jobTitleOne%></p></div>
+        </div>
+            <div><p id="orgyOne"><%=  orgyNameOne%></p></div>
+        </div>        
+        <div class="col-xs-1"></div>
+        </div>
+        <!--EDUCATION & EXPERIENCE TEXT ONE ENDED-->
+        
+        <!--EDUCATION & EXPERIENCE TEXT TWO-->
+        <div class="row" id="two-ed-ex">
+        <div class="col-xs-1"></div>
+        <div class="education-text col-xs-5">
+        <div class="row">
+            <div class="col-xs-4"><p id="edPeriodTwo"><%=  qperiodTwo%></p></div>
+            <div class="col-xs-8"><p id="degreeTwo"><%=  degreeTwo%></p></div>
+        </div>
+            <div>    <p id="instTwo"><%=  instNameTwo%></p></div>
+        </div>
+        
+        <div class="experience-text col-xs-5">
+        <div class="row">
+            <div class="col-xs-4"><p id="exPeriodTwo"><%=  eperiodTwo%></p></div>
+            <div class="col-xs-8"><p id="jobTwo"><%=  jobTitleTwo%></p></div>
+        </div>
+            <div><p id="orgyTwo"><%=  orgyNameTwo%></p></div>
+        </div>        
+        <div class="col-xs-1"></div>
+        </div>
+        
+        <!--EDUCATION & EXPERIENCE TEXT THREE-->
+        <div class="row" id="three-ed-ex">  
+        <div class="col-xs-1"></div>
+        <div class="education-text col-xs-5">
+        <div class="row">
+            <div class="col-xs-4"><p id="edPeriodThree"><%=  qperiodThree%></p></div>
+            <div class="col-xs-8"><p id="degreeThree"><%=  degreeThree%></p></div>
+        </div>
+            <div>    <p id="instThree"><%=  instNameThree%></p></div>
+        </div>
+        
+        <div class="experience-text col-xs-5">
+        <div class="row">
+            <div class="col-xs-4"><p id="exPeriodThree"><%=  eperiodThree%></p></div>
+            <div class="col-xs-8"><p id="jobThree"><%=  jobTitleThree%></p></div>
+        </div>
+            <div><p id="orgyThree"><%=  orgyNameThree%></p></div>
+        </div>        
+        <div class="col-xs-1"></div>
+        </div>
+    
+        <!--EDUCATION & EXPERIENCE TEXT FOUR-->    
+        <div class="row" id="four-ed-ex">
+        <div class="col-xs-1"></div>
+        <div class="education-text col-xs-5">
+        <div class="row">
+            <div class="col-xs-4"><p id="edPeriodFour"><%=  qperiodFour%></p></div>
+            <div class="col-xs-8"><p id="degreeFour"><%=  degreeFour%></p></div>
+        </div>
+            <div>    <p id="instFour"><%=  instNameFour%></p></div>
+        </div>
+        
+        <div class="experience-text col-xs-5">
+        <div class="row">
+            <div class="col-xs-4"><p id="exPeriodFour"><%=  eperiodFour%></p></div>
+            <div class="col-xs-8"><p id="jobFour"><%=  jobTitleFour%></p></div>
+        </div>
+            <div><p id="orgyFour"><%=  orgyNameFour%></p></div>
+        </div>        
+        <div class="col-xs-1"></div>
+        </div>
+   
+    
+    <div id="pro-ski-rect" class="green-rectangles"><p style="padding-top: 5px;">Professional Skills</p></div>
+    <div class="horiz-line" id="third-hor-line"></div>
+    <div class="green-circles" id="pro-ski-circle"><i class="fa fa-wrench" id="pro-ski-text"></i></div>
+     
+    
+    <!--SKILLS STARTED-->
+    <!--**************-->
+    <div class="row" id="skills">
+    <div class="col-xs-1"></div>
+        <div class="col-xs-5">
+        <div class="row">
+        <div class="col-xs-4"><p class="skill-text"><%=  skOne%></p></div>
+        
+        <div class="col-xs-8" id="stars">
+        <p>
+            <% for(var sk1 = 0; sk1 < lvOne; sk1++) { %>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                
+                                <% } %></p>
+        </div>
+        </div>
+        </div>
+        
+        <div class="col-xs-5">
+        <div class="row">
+        <div class="col-xs-4"><p class="skill-text"><%=  skTwo%></p></div>
+        <div class="col-xs-8" id="stars">
+        <p>
+        <% for(var sk2 = 0; sk2 < lvTwo; sk2++) { %>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                
+                                <% } %></p>
+        </div>
+        </div>
+        </div>
+        <div class="col-xs-1"></div>
+    </div>
+    
+    <div class="row" id="skills">
+    <div class="col-xs-1"></div>
+        <div class="col-xs-5">
+        <div class="row">
+        <div class="col-xs-4"><p class="skill-text"><%=  skThree%></p></div>
+        
+        <div class="col-xs-8" id="stars">
+        <p>
+        <% for(var sk3 = 0; sk3 < lvThree; sk3++) { %>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                
+                                <% } %></p></div>
+        </div>
+        </div>
+        
+        <div class="col-xs-5">
+        <div class="row">
+            <div class="col-xs-4"><p class="skill-text"><%=  skFour%></p></div>
+        <div class="col-xs-8" id="stars">
+        <p>
+        <% for(var sk4 = 0; sk4 < lvFour; sk4++) { %>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                
+                                <% } %></p></div>
+        </div>
+        </div>
+        <div class="col-xs-1"></div>
+    </div>
+    
+    <div class="row" id="skills">
+    <div class="col-xs-1"></div>
+        <div class="col-xs-5">
+        <div class="row">
+        <div class="col-xs-4"><p class="skill-text"><%=  skFive%></p></div>
+        
+        <div class="col-xs-8" id="stars">
+        <p>
+        <% for(var sk5 = 0; sk5 < lvFive; sk5++) { %>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                
+                                <% } %></p>
+            </div>
+        </div>
+        </div>
+        
+        <div class="col-xs-5">
+        <div class="row">
+        <div class="col-xs-4"><p class="skill-text"><%=  skSix%></p></div>
+        <div class="col-xs-8" id="stars">
+        <p>
+        <% for(var sk6 = 0; sk6 < lvSix; sk6++) { %>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                
+                                <% } %></p>
+        </div>
+        </div>
+        </div>
+        <div class="col-xs-1"></div>
+    </div>
+    
+    <div class="row" id="skills">
+    <div class="col-xs-1"></div>
+        <div class="col-xs-5">
+        <div class="row">
+        <div class="col-xs-4"><p class="skill-text"><%=  skSeven%></p></div>
+        
+        <div class="col-xs-8" id="stars">
+        <p>
+        <% for(var sk7 = 0; sk7 < lvSeven; sk7++) { %>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                
+                                <% } %></p>
+        </div>
+        </div>
+        </div>
+        
+        <div class="col-xs-5">
+        <div class="row">
+        <div class="col-xs-4"><p class="skill-text"><%=  skEight%></p></div>
+        <div class="col-xs-8" id="stars">
+        <p>
+        <% for(var sk8 = 0; sk8 < lvEight; sk8++) { %>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                
+                                <% } %></p>
+        </div>
+        </div>
+        </div>
+        <div class="col-xs-1"></div>
+    </div>
+    
+    
+    </div>
+        <script src="./public-files/js/jquery-3.1.1.min.js"></script>
+        <script src="./public-files/js/bootstrap.min.js"></script>
+</body>
+</html>

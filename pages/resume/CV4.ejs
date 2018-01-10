@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Resume Template - F2</title>
+
+      <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #main-container{
+            height: 296mm;
+            width: 210mm;
+            font-family: Verdana;
+            /*background: url(../cv2.png);*/
+            background-color: #F9F3F3  !important;
+        }
+
+        .no-padding-please {
+            padding-left: 2px;
+            padding-right: 0;
+        }
+
+        .iName {
+            color: #FC334B !important;
+        }
+
+        /**********************************************/
+        /********************HEADER********************/
+        /**********************************************/
+
+        #header {
+            background-color: #FC334B !important;
+            padding: 57px 0 8px 32px;
+            color: white;
+        }
+
+        #name {
+            font-size: 24px;
+            padding-left: 6px;
+        }
+
+        #hello {
+            font-size: 72px;
+            padding: 42px 0 0 0;
+        }
+
+        #tag {
+            margin-top: -30px;
+            font-size: 18px;
+            padding-left: 5px;
+        }
+
+        /**********************************************/
+        /****************** About ME ******************/
+        /**********************************************/
+
+        #about-me {
+             padding-top: 20px;
+             padding-bottom: 20px; 
+        }
+
+        #about-me-title {
+            font-size: 18px;
+            padding: 10px 0 0 25px;
+            color: #FC334B  !important;
+        }
+
+        .about-me-data-container {
+            padding: 15px 12px 0 0 ;
+        }
+
+        .about-data-div {
+            font-size: 10px;
+            padding: 0;
+        }
+
+        .data-heading {
+             color: #FC334B  !important;
+        }
+
+        #address {
+            word-wrap: break-word;
+            padding-right: 5px;
+        }
+
+        /**********************************************/
+        /***************** Education ******************/
+        /**********************************************/
+
+        #edu-and-work {
+            padding: 25px 0 20px 0;
+            margin: 2px 5px 0 5px;
+            border-top: 2px solid lightgray;
+            border-bottom: 2px solid lightgray;
+        }
+
+        #edu {
+            padding-left: 0;
+        }
+
+        #ew-heading {
+            font-size: 18px;
+            color: #FC334B  !important;
+        }
+
+        .data-container {
+            font-size: 11px;
+            height: 70px;
+        }
+
+        .data-date {
+            padding-right: 0;
+        }
+
+        .data-data {
+            padding-left: 0;
+            padding-top: 4px;
+            padding-right: 0;
+            line-height: 7px;
+        }
+
+
+        /**********************************************/
+        /******************* Work *********************/
+        /**********************************************/
+
+        #work {
+            padding-right: 0;
+        }
+
+        /**********************************************/
+        /********************Skills********************/
+        /**********************************************/
+
+        #skills {
+            padding: 25px 0 20px 0;
+            margin: 2px 0 0 0;
+        }
+
+        .skills-container {
+            margin-left: 0;
+        }
+
+        #skill-container-border {
+            border-right: 1px solid black;
+        }
+
+        .fa {
+            font-size: 18px;
+            color: #FC334B  !important;
+        }
+
+        @media print {
+            .fa-star:before {
+                color: #FC334B !important;
+            }
+
+            #main-container{
+                background-color: #F9F3F3  !important;
+                -webkit-print-color-adjust: exact;
+        }
+
+            #header {
+                background-color: #FC334B !important;
+                padding: 57px 0 8px 32px;
+                color: white !important;
+                -webkit-print-color-adjust: exact;
+            }
+
+            #name, #hello, #tag {
+                color: white !important;
+
+            }
+
+            #about-me-title p, .data-heading p  {
+                color: #FC334B  !important;
+        }
+        }
+
+
+      
+      </style>
+    <!-- Bootstrap -->
+    <link href="./public-files/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./public-files/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <body>
+      <div class="container" id="main-container">
+          
+          <!-- HEADER STARTS HERE -->
+          <section class="row" id="header">
+              <div class="col-xs-12">
+                  <p id="name"><%= firstName %> <%= lastName %></p>
+                  <p id="hello">HELLO</p>
+                  <p id="tag">this is my Resume</p>
+              </div>
+          </section>
+          <!-- HEADER ENDS HERE -->
+          
+          <!-- ABOUT ME STARTS HERE -->
+          <section class="row" id="about-me">
+              
+              <!-- COLUMN 1 -->
+              <div class="col-xs-4" id="about-me-title">
+                  <p>Who I Am</p>
+              </div>
+              
+              <!-- COLUMN 2 -->
+              <div class="col-xs-4 about-me-data-container">
+                  
+                  <div class="row about-data-div" >
+                      <div class="col-xs-3 data-heading">
+                          <p>Name</p>
+                      </div>
+                      
+                      <div class="col-xs-9 no-padding-please">
+                          <p><%= firstName %> <%= lastName %></p>
+                      </div>
+                  </div>
+                  
+                  <div class="row about-data-div" >
+                      <div class="col-xs-3  data-heading">
+                          <p>D.O.B.</p>
+                      </div>
+                      
+                      <div class="col-xs-9 no-padding-please">
+                          <p><%= dob %></p>
+                      </div>
+                  </div>
+                  
+                  <div class="row about-data-div" >
+                      <div class="col-xs-3  data-heading">
+                          <p>Address</p>
+                      </div>
+                      
+                      <div class="col-xs-9 no-padding-please" id="address">
+                          <p><%= address %></p>
+                      </div>
+                  </div>
+                  
+                  <!--<div class="row about-data-div" >
+                      <div class="col-xs-3 data-heading">
+                          <p>LinkedIn</p>
+                      </div>
+                      
+                      <div class="col-xs-9 no-padding-please">
+                          <p>www.linkedin.com/yourusername</p>
+                      </div>
+                  </div>-->
+                  
+              </div>
+              
+              <!-- COLUMN 3 -->
+              <div class="col-xs-4 about-me-data-container">
+                  
+                  <div class="row about-data-div" >
+                      <div class="col-xs-3  data-heading">
+                          <p>Email</p>
+                      </div>
+                      
+                      <div class="col-xs-9 no-padding-please" >
+                          <p><%= email %></p>
+                      </div>
+                  </div>
+                  
+                  <div class="row about-data-div" >
+                      <div class="col-xs-3  data-heading">
+                          <p>Mobile</p>
+                      </div>
+                      
+                      <div class="col-xs-9 no-padding-please">
+                          <p><%= cellNumOne %></p>
+                      </div>
+                  </div>
+                  
+                  <div class="row about-data-div" >
+                      <div class="col-xs-3  data-heading">
+                          <p>Mobile</p>
+                      </div>
+                      
+                      <div class="col-xs-9 no-padding-please">
+                          <p><%= cellNumTwo %></p>
+                      </div>
+                  </div>
+                  
+                  <div class="row about-data-div" >
+                      <div class="col-xs-3  data-heading">
+                          <p>Skype</p>
+                      </div>
+                      
+                      <div class="col-xs-9 no-padding-please">
+                          <p><%= skypeID %></p>
+                      </div>
+                  </div>
+                  
+              </div>
+          </section>
+          <!-- ABOUT ME ENDS HERE -->
+          
+          <!-- EDU AND WORK STARTS HERE -->
+          <section class="row" id="edu-and-work">
+              
+              <!-- EDU  -->
+              <div class="col-xs-6" id="edu">
+                  <p id="ew-heading">Where I've Studied</p>
+                  
+                  <div class="row data-container">
+                      <div class="col-xs-4 data-date">
+                          <p><%= qperiodOne %></p>
+                      </div>
+                      <div class="col-xs-8 data-data">
+                          <p class="iName"><%= instNameOne %></p>
+                          <p><%= degreeOne %></p>
+                          <p><%= cgpaOne %></p>
+                      </div>
+                  </div>
+                  
+                  <div class="row data-container">
+                      <div class="col-xs-4 data-date">
+                          <p><%= qperiodTwo %></p>
+                      </div>
+                      <div class="col-xs-8 data-data">
+                          <p class="iName"><%= instNameTwo %></p>
+                          <p><%= degreeTwo %></p>
+                          <p><%= cgpaTwo %></p>
+                      </div>
+                  </div>
+                  
+                  <div class="row data-container">
+                      <div class="col-xs-4 data-date">
+                          <p><%= qperiodThree %></p>
+                      </div>
+                      <div class="col-xs-8 data-data">
+                          <p class="iName"><%= instNameThree %></p>
+                          <p><%= degreeThree %></p>
+                          <p><%= cgpaThree %></p>
+                      </div>
+                  </div>
+                  
+                  <div class="row data-container">
+                      <div class="col-xs-4 data-date">
+                          <p><%= qperiodFour %></p>
+                      </div>
+                      <div class="col-xs-8 data-data">
+                          <p class="iName"><%= instNameFour %></p>
+                          <p><%= degreeFour %></p>
+                          <p><%= cgpaFour %></p>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- WORK -->
+              <div class="col-xs-6" id="work">
+                  
+                  <p id="ew-heading">Where I've Worked</p>
+                  
+                  <div class="row data-container">
+                      <div class="col-xs-4 data-date">
+                          <p><%= eperiodOne %></p>
+                      </div>
+                      <div class="col-xs-8 data-data">
+                          <p class="iName"><%= orgyNameOne %></p>
+                          <p><%= jobTitleOne %></p>
+                      </div>
+                  </div>
+                  
+                  <div class="row data-container">
+                      <div class="col-xs-4 data-date">
+                          <p><%= eperiodTwo %></p>
+                      </div>
+                      <div class="col-xs-8 data-data">
+                          <p class="iName"><%= orgyNameTwo %></p>
+                          <p><%= jobTitleTwo %></p>
+                      </div>
+                  </div>
+                  
+                  
+                  <div class="row data-container">
+                      <div class="col-xs-4 data-date">
+                          <p><%= eperiodThree %></p>
+                      </div>
+                      <div class="col-xs-8 data-data">
+                          <p class="iName"><%= orgyNameThree %></p>
+                          <p><%= jobTitleThree %></p>
+                      </div>
+                  </div>
+                  
+                  
+                  <div class="row data-container">
+                      <div class="col-xs-4 data-date">
+                          <p><%= eperiodFour %></p>
+                      </div>
+                      <div class="col-xs-8 data-data">
+                          <p class="iName"><%= orgyNameFour %></p>
+                          <p><%= jobTitleFour %></p>
+                      </div>
+                  </div>
+              </div>
+          </section>
+          <!-- EDU AND WORK ENDS HERE -->
+          <!-- SKILLS STARTS HERE -->
+          <section class="row" id="skills">
+              <p id="ew-heading">Skills</p>
+              
+             <div class="col-xs-6" id="skill-container-border">
+                      
+                      <div class="row skills-container">
+                          <div class="col-xs-4 ">
+                            <p><%= skOne %></p>
+                          </div>
+                          <div class="col-xs-8">
+                            <p>
+                                <% for(var sk1 = 0; sk1 < lvOne; sk1++) { %>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <% } %>
+                            </p>
+                          </div>
+                      </div>
+                      
+                      <div class="row skills-container">
+                          <div class="col-xs-4 ">
+                            <p><%= skTwo %></p>
+                          </div>
+                          <div class="col-xs-8">
+                            <p>
+                                <% for(var sk2 = 0; sk2 < lvTwo; sk2++) { %>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <% } %>
+                            </p>
+                          </div>
+                      </div>
+                      
+                      <div class="row skills-container">
+                          <div class="col-xs-4 ">
+                            <p><%= skThree %></p>
+                          </div>
+                          <div class="col-xs-8">
+                            <p>
+                                <% for(var sk3 = 0; sk3 < lvThree; sk3++) { %>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <% } %>
+                            </p>
+                          </div>
+                      </div>
+                      
+                      <div class="row skills-container">
+                          <div class="col-xs-4 ">
+                            <p><%= skFour %></p>
+                          </div>
+                          <div class="col-xs-8">
+                            <p>
+                                <% for(var sk4 = 0; sk4 < lvFour; sk4++) { %>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <% } %>
+                            </p>
+                          </div>
+                      </div>
+                      
+                  </div>
+                  
+                   <div class="col-xs-6">
+                      
+                      <div class="row skills-container">
+                          <div class="col-xs-4 ">
+                            <p><%= skFive %></p>
+                          </div>
+                          <div class="col-xs-8">
+                            <p>
+                                <% for(var sk5 = 0; sk5 < lvFive; sk5++) { %>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <% } %>
+                            </p>
+                          </div>
+                      </div>
+                      
+                      <div class="row skills-container">
+                          <div class="col-xs-4 ">
+                            <p><%= skSix %></p>
+                          </div>
+                          <div class="col-xs-8">
+                            <p>
+                                <% for(var sk6 = 0; sk6 < lvSix; sk6++) { %>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <% } %>
+                            </p>
+                          </div>
+                      </div>
+                      
+                      <div class="row skills-container">
+                          <div class="col-xs-4 ">
+                            <p><%= skSeven %></p>
+                          </div>
+                          <div class="col-xs-8">
+                            <p>
+                                <% for(var sk7 = 0; sk7 < lvSeven; sk7++) { %>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <% } %>
+                            </p>
+                          </div>
+                      </div>
+                      
+                      <div class="row skills-container">
+                          <div class="col-xs-4 ">
+                            <p><%= skEight %></p>
+                          </div>
+                          <div class="col-xs-8">
+                            <p>
+                                <% for(var sk8 = 0; sk8 < lvEight; sk8++) { %>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <% } %>
+                            </p>
+                          </div>
+                      </div>
+                      
+                  </div>
+                  </section>
+              </div>
+          
+          
+        
+          
+          
+         
+      
+
+    <script src="./public-files/js/jquery-3.1.1.min.js"></script>
+    <script src="./public-files/js/bootstrap.min.js"></script>
+  </body>
+</html>

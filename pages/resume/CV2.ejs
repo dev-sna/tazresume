@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #body-properties{
+            height: 296mm;
+            width: 210mm;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #main-div{
+            background-color: whitesmoke;
+            height: 100%;
+            width: 100%;
+        }
+        #blue-block{
+            width: 8mm;
+            height: 20mm;
+            background-color: rgb(0 , 174 , 239);
+            margin: 12mm 0 0 0;
+        }
+        #post-name{
+            margin-top: 15mm;
+        }
+        #profile-div{
+         margin-top: 5mm;   
+        }
+        .blue-text-headings{
+            color: rgb(0, 174, 239);
+            font-size: 1.3em;
+            font-family: 'Merriweather', serif;
+            font-weight: 600;
+        }
+        #first-hor-line{
+            width: 100mm;
+            height: 1mm;
+            background-color: black;
+        }
+        .personal-details-text{
+            font-size: 0.8em;
+            font-weight: 500;
+            font-family: 'Merriweather', serif;
+            color: rgb(0, 174, 239);
+        }
+        .personal-details-var{
+            font-family: 'Merriweather', serif;
+            color: black;
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+        #second-hor-line{
+         height: 1mm;
+         margin-top: 3mm;
+         background-color: black;
+        }
+        #ed-head-div{
+            margin-top: 5mm;
+        }
+        .ed-ex-text-black{
+            color: black;
+            font-size: 1em;
+            font-weight: 600;
+            font-family: 'Merriweather', serif;
+        }
+        .period-text{
+            font-weight: 600;
+            font-size: 0.9em;
+            color: rgb(0, 174,239);
+            margin: 0 0 2mm 5mm;
+        }
+        .ed-ex-text-margin{
+            margin-top: 4mm;
+        }
+        #ex-head-div{
+            margin-top: 5mm;
+            padding-bottom: 5mm;
+        }
+        .star-gap{
+            margin-right: 3mm;
+        }
+        #stars{
+            color: rgb(0, 174, 239);
+            font-size: 1.5em;
+        }
+        .skill-text{
+            padding: 1mm 0 0 0;
+            font-size: 1em;
+            font-weight: 600;
+            font-family: 'Merriweather', serif;
+        }
+         @media print {
+            #main-div{
+                background-color: whitesmoke !important;
+            }
+            #blue-block{
+                background-color: rgb(0 , 174 , 239) !important;
+            }
+            .blue-text-headings{
+                color: rgb(0, 174, 239) !important;
+            }
+            #first-hor-line{
+                background-color: black !important;
+            }
+            .personal-details-text{
+                color: rgb(0, 174, 239) !important;
+            }
+            .personal-details-var{
+                color: black !important;
+            }
+            #second-hor-line{
+                 background-color: black !important;
+            }
+            .ed-ex-text-black{
+                color: black !important;
+            }
+            .period-text{
+                color: rgb(0, 174,239) !important;
+            }
+            .fa.fa-star:before{
+                color: rgb(0, 174, 239) !important;
+            }
+             .personal-details-text>p{
+                 color: rgb(0, 174,239) !important;
+             }
+        }
+
+    </style>
+    
+    <!--<link href="./public-files/css/Merriweather.css" rel="stylesheet">-->
+    <link href="./public-files/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./public-files/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<body id="body-properties">
+<div id="main-div">
+
+    <div class="row">
+    <div class="col-xs-1"><div id="blue-block"></div></div>
+    <div class="col-xs-5" id="post-name">
+    
+    <p class="blue-text-headings" id="post"><%= postApplied%></p>
+    <p class="blue-text-headings"><%= firstName%> <%= lastName%></p>
+    <div id="first-hor-line"></div>
+    </div>
+    </div>
+
+    <!--PROFILE DIV STARTED-->
+    <!--*******************-->
+    <div class="row container-fluid" id="profile-div">
+    <div class="col-xs-5">
+    <div class="row">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-10">
+    <div class="row">
+    <div class="personal-details-text col-xs-4">
+    <p>Birth Date:</p>
+    <p>Contact#:</p>
+    <p>Email:</p>
+    <!--<p>LinkedIn:</p>-->
+    </div>
+    
+    <div class="personal-details-var col-xs-8">
+    <p><%= dob%></p>
+    <p><%= cellNumOne%></p>
+    <p><%= email%></p>
+    <!--<p>Profile Link</p>-->
+    </div>
+    
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <div class="col-xs-7">
+    <div class="row">
+    <div class="personal-details-text col-xs-2">
+    <p>Address:</p>
+    <p>Contact#:</p>
+    <p>Skype ID:</p>
+    </div>
+    
+    <div class="personal-details-var col-xs-10">
+    <p><%= address%></p>
+    <p><%= cellNumTwo%></p>
+    <p><%= skypeID%></p>
+    </div>
+    </div>
+    
+    </div>
+        
+    </div>
+    <!--*****************-->
+    <!--PROFILE DIV ENDED-->
+    
+    <!--EDUCATION DIV STARTED-->
+    <!--*********************-->
+    <div class="row" id="ed-head-div">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-2"><p class="blue-text-headings">Education</p></div>
+    <div class="col-xs-8"><div id="second-hor-line"></div></div>
+    <div class="col-xs-1"></div>
+    </div>
+    
+    <div class="row">
+    <div class="col-xs-6">
+    <div class="row">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-10">
+    
+    <div class="ed-ex-text-margin">
+    <p class="ed-ex-text-black"><%= degreeOne%></p>
+    <p class="period-text"><%= qperiodOne%></p>
+    <p class="ed-ex-text-black"><%= instNameOne%></p></div>
+    
+    <div class="ed-ex-text-margin">
+    <p class="ed-ex-text-black"><%= degreeTwo%></p>
+    <p class="period-text"><%= qperiodTwo%></p>
+    <p class="ed-ex-text-black"><%= instNameTwo%></p></div>
+    
+    </div>
+    </div>
+    </div>
+    
+    <div class="col-xs-6">
+    
+    
+    <div class="ed-ex-text-margin">
+    <p class="ed-ex-text-black"><%= degreeThree%></p>
+    <p class="period-text"><%= qperiodThree%></p>
+    <p class="ed-ex-text-black"><%= instNameThree%></p></div>
+    
+    <div class="ed-ex-text-margin">
+    <p class="ed-ex-text-black"><%= degreeFour%></p>
+    <p class="period-text"><%= qperiodFour%></p>
+    <p class="ed-ex-text-black"><%= instNameFour%></p></div>
+    
+    </div>
+    </div>
+    <!--*********************-->
+    <!--EDUCATION DIV ENDED-->
+    
+    <!--EXPERIENCE DIV STARTED-->
+    <!--**********************-->
+    <div class="row" id="ex-head-div">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-2"><p class="blue-text-headings">Experience</p></div>
+    <div class="col-xs-8"><div id="second-hor-line"></div></div>
+    <div class="col-xs-1"></div>
+    </div>
+    
+    
+    <div class="row">
+    <div class="col-xs-6">
+    <div class="row">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-10">
+    
+    <div class="ed-ex-text-margin">
+    <p class="ed-ex-text-black"><%= jobTitleOne%></p>
+    <p class="period-text"><%= eperiodOne%></p>
+    <p class="ed-ex-text-black"><%= orgyNameOne%></p></div>
+    
+    <div class="ed-ex-text-margin">
+    <p class="ed-ex-text-black"><%= jobTitleTwo%></p>
+    <p class="period-text"><%= eperiodTwo%></p>
+    <p class="ed-ex-text-black"><%= orgyNameTwo%></p></div>
+    
+    </div>
+    </div>
+    </div>
+    
+    <div class="col-xs-6">
+    
+    
+    <div class="ed-ex-text-margin">
+    <p class="ed-ex-text-black"><%= jobTitleThree%></p>
+    <p class="period-text"><%= eperiodThree%></p>
+    <p class="ed-ex-text-black"><%= orgyNameThree%></p></div>
+    
+    <div class="ed-ex-text-margin">
+    <p class="ed-ex-text-black"><%= jobTitleFour%></p>
+    <p class="period-text"><%= eperiodFour%></p>
+    <p class="ed-ex-text-black"><%= orgyNameFour%></p></div>
+    
+    </div>
+    </div>
+    <!--********************-->
+    <!--EXPERIENCE DIV ENDED-->
+
+    <!--SKILLS DIV STARTED-->
+    <!--******************-->
+    <div class="row" id="ex-head-div">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-2"><p class="blue-text-headings">Professional Skills</p></div>
+    <div class="col-xs-8"><div id="second-hor-line"></div></div>
+    <div class="col-xs-1"></div>
+    </div>
+    
+    <div class="row" id="skills">
+    <div class="col-xs-1"></div>
+        <div class="col-xs-5">
+        <div class="row">
+        <div class="col-xs-4"><p class="skill-text"><%= skOne%></p></div>
+        
+        <div class="col-xs-8" id="stars">
+        <p>
+            <% for(var sk1 = 0; sk1 < lvOne; sk1++) { %>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <% } %>
+        </p>
+        </div>
+        </div>
+        </div>
+        
+        <div class="col-xs-5">
+        <div class="row">
+        <div class="col-xs-4"><p class="skill-text"><%= skTwo%></p></div>
+        <div class="col-xs-8" id="stars">
+        <p>
+            <% for(var sk2 = 0; sk2 < lvTwo; sk2++) { %>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <% } %>
+        </p>
+        </div>
+        </div>
+        </div>
+        <div class="col-xs-1"></div>
+    </div>
+    
+    <div class="row" id="skills">
+    <div class="col-xs-1"></div>
+        <div class="col-xs-5">
+        <div class="row">
+        <div class="col-xs-4"><p class="skill-text"><%= skThree%></p></div>
+        
+        <div class="col-xs-8" id="stars">
+       <p>
+            <% for(var sk3 = 0; sk3 < lvThree; sk3++) { %>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <% } %>
+        </p>
+        </div>
+        </div>
+        </div>
+        
+        <div class="col-xs-5">
+        <div class="row">
+        <div class="col-xs-4"><p class="skill-text"><%= skFour%></p></div>
+        <div class="col-xs-8" id="stars">
+        <p>
+            <% for(var sk4 = 0; sk4 < lvFour; sk4++) { %>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <% } %>
+        </p>
+        </div>
+        </div>
+        </div>
+        <div class="col-xs-1"></div>
+    </div>
+    
+    <div class="row" id="skills">
+    <div class="col-xs-1"></div>
+        <div class="col-xs-5">
+        <div class="row">
+        <div class="col-xs-4"><p class="skill-text"><%= skFive%></p></div>
+        
+        <div class="col-xs-8" id="stars">
+        <p>
+            <% for(var sk5 = 0; sk5 < lvFive; sk5++) { %>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <% } %>
+            </p>
+        </div>
+        </div>
+        </div>
+        
+        <div class="col-xs-5">
+        <div class="row">
+            <div class="col-xs-4"><p class="skill-text"><%= skSix%></p></div>
+        <div class="col-xs-8" id="stars">
+        <p>
+            <% for(var sk6 = 0; sk6 < lvSix; sk6++) { %>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <% } %>
+            </p>
+        </div>
+        </div>
+        </div>
+        <div class="col-xs-1"></div>
+    </div>
+    
+    <div class="row" id="skills">
+    <div class="col-xs-1"></div>
+        <div class="col-xs-5">
+        <div class="row">
+        <div class="col-xs-4"><p class="skill-text"><%= skSeven%></p></div>
+        
+        <div class="col-xs-8" id="stars">
+        <p>
+            <% for(var sk7 = 0; sk7 < lvSeven; sk7++) { %>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <% } %>
+            </p>
+        </div>
+        </div>
+        </div>
+        
+        <div class="col-xs-5">
+        <div class="row">
+        <div class="col-xs-4"><p class="skill-text"><%= skEight%></p></div>
+        <div class="col-xs-8" id="stars">
+        <p>
+            <% for(var sk8 = 0; sk8 < lvEight; sk8++) { %>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <% } %>
+            </p>
+        </div>
+        </div>
+        </div>
+        <div class="col-xs-1"></div>
+    </div>
+    <!--****************-->
+    <!--SKILLS DIV ENDED-->
+    
+    </div>
+    <script src="./public-files/js/jquery-3.1.1.min.js"></script>
+    <script src="./public-files/js/bootstrap.min.js"></script>
+</body>
+</html>
